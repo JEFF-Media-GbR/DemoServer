@@ -1,0 +1,498 @@
+spawn:
+  world: demoworld
+  x: -115.6
+  y: 4
+  z: 188.383
+  yaw: -2
+  pitch: 11.7
+
+plugins:
+  AngelChest Plus:
+    modeldata: 3
+    link: "https://link.jeff-media.com/angelchest-plus-spigot"
+    location: #359.5 64 3215.5 0 0
+      world: demoworld2
+      x: 359.5
+      y: 64
+      z: 3215.5
+      yaw: 0
+      pitch: 0
+    items:
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: GOLDEN_SWORD
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: DIAMOND_SHOVEL
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: DIAMOND_PICKAXE
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: DIAMOND_AXE
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: DIAMOND_HOE
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: RABBIT_STEW
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: GLOW_BERRIES
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: PUFFERFISH
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: EXPERIENCE_BOTTLE
+        amount: 64
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: DIAMOND
+        amount: 64
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: OAK_BOAT
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: SADDLE
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: ELYTRA
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: GOLDEN_BOOTS
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: GOLDEN_LEGGINGS
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: GOLDEN_CHESTPLATE
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: GOLDEN_HELMET
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: SHIELD
+
+
+
+  Drop2Inventory Plus:
+    modeldata: 4
+    link: "https://link.jeff-media.com/drop2inventory-plus-spigot"
+    location:
+      world: tempworld
+      spawn: true
+    message:
+      - "§aYou are now in a world where you can place and break blocks. I also gave you some tools."
+      - "§aYou can enable §6Drop2Inventory§a using §d/drop2inv§a. Just enable it and mine some blocks. They will get put into your inventory instead of dropping to the ground."
+      - "§aOf course you can also force players to have §6Drop2Inventory§a enabled."
+    items:
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: NETHERITE_SWORD
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          enchants:
+            DAMAGE_ALL: 5
+            DURABILITY: 3
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: NETHERITE_SHOVEL
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          enchants:
+            DIG_SPEED: 5
+            DURABILITY: 3
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: NETHERITE_PICKAXE
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          enchants:
+            DIG_SPEED: 5
+            DURABILITY: 3
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: NETHERITE_AXE
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          enchants:
+            DIG_SPEED: 5
+            DURABILITY: 3
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: NETHERITE_HOE
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          enchants:
+            DIG_SPEED: 5
+            DURABILITY: 3
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: SHEARS
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          enchants:
+            DIG_SPEED: 5
+            DURABILITY: 3
+
+  Jukebox Plus:
+    modeldata: 5
+    link: "https://link.jeff-media.com/jukeboxplus-spigot"
+    location:
+      world: demoworld
+      x: -129.5
+      y: 4
+      z: 24
+      yaw: -180
+      pitch: 0
+    items:
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: MUSIC_DISC_WARD
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: MUSIC_DISC_11
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: MUSIC_DISC_WAIT
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: MUSIC_DISC_PIGSTEP
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: MUSIC_DISC_13
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: MUSIC_DISC_CAT
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: MUSIC_DISC_BLOCKS
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: MUSIC_DISC_CHIRP
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: MUSIC_DISC_FAR
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: MUSIC_DISC_MALL
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: MUSIC_DISC_MELLOHI
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: MUSIC_DISC_STAL
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: MUSIC_DISC_STRAD
+  AutoShulker:
+    modeldata: 6
+    link: "https://link.jeff-media.com/autoshulker-spigot"
+    location:
+      world: tempworld
+      spawn: true
+    message:
+      - "§aYou are now in a world where you can place and break blocks. I also gave you all items required to craft an AutoShulker."
+      - "§aTake a look at this video to see the crafting recipes: §bhttps://www.youtube.com/watch?v=w5-71Hn6JoQ"
+      - "§aWhen you crafted the AutoShulker, just mine some blocks and you'll see that they'll get collected by your AutoShulker!"
+    items:
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: CRAFTING_TABLE
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: ORANGE_SHULKER_BOX
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: BOOK
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: DIRT
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: COBBLESTONE
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: LAVA_BUCKET
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: NETHERITE_PICKAXE
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: NETHERITE_SHOVEL
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: NETHERITE_AXE
+
+  RePlant:
+    modeldata: 7
+    link: "https://link.jeff-media.com/replant-spigot"
+    message:
+      - "§cSorry, I haven't setup a test scenario for §6RePlant§c yet. Please come back again in a few days to try out §RePlant§c."
+  ChestSort:
+    modeldata: 1
+    link: "https://link.jeff-media.com/chestsort-spigot"
+    give-random-items: 10
+    items:
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: CHEST
+        amount: 2
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: BARREL
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: DIAMOND_SWORD
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: DIAMOND_SHOVEL
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: DIAMOND_PICKAXE
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: GOLDEN_PICKAXE
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: IRON_PICKAXE
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: STONE_PICKAXE
+    location:
+      world: tempworld
+      spawn: true
+    message:
+      - "§aYou are now in a world where you can place and break blocks. I also gave you two chests, a barrel, and some other random items."
+      - "§aJust put all those random items into the chest. You can sort it using the hotkeys (see §d/sort hotkeys§a) or enable automatic sorting using §d/sort§a."
+      - "§aThe chest should be sorted everytime you open it. You can also sort your own inventory using hotkeys when you're in Survival gamemode."
+
+  InvUnload:
+    modeldata: 2
+    link: "https://link.jeff-media.com/invunload-spigot"
+  LumberJack:
+    modeldata: 8
+    link: "https://link.jeff-media.com/lumberjack-spigot"
+    message:
+      - "§aYou are now in a world where you can place and break blocks. If there are no treas nearby, just plant some yourself."
+      - " "
+      - "§a§lYou can enable §6§lLumberJack§a§l using §d§l/lumberjack§r§a. Just go ahead & chop some trees §a:-)"
+    location:
+      world: tempworld
+      spawn: true
+    items:
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: NETHERITE_AXE
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          enchants:
+            DIG_SPEED: 5
+            DURABILITY: 3
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: DIAMOND_AXE
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          enchants:
+            DURABILITY: 3
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: OAK_SAPLING
+        amount: 64
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: SPRUCE_SAPLING
+        amount: 64
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: BONE_MEAL
+        amount: 64
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: BONE_MEAL
+        amount: 64
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: BONE_MEAL
+        amount: 64
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: BONE_MEAL
+        amount: 64
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: DIRT
+        amount: 64
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: BIRCH_SAPLING
+        amount: 64
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: JUNGLE_SAPLING
+        amount: 64
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: ACACIA_SAPLING
+        amount: 64
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: DARK_OAK_SAPLING
+        amount: 64
+
+  BestTools:
+    modeldata: 9
+    link: "https://link.jeff-media.com/besttools-spigot"
+    message:
+      - "§aYou are now in a world where you can place and break blocks. I was also very generous and gave you some enchanted tools, lol."
+      - " "
+      - "§a§lYou can enable §6§lBestTools§a§l using §d§l/besttools§r§a. Just go ahead and play as usual. You will see that you never have to worry about switching your tools anymore!"
+    location:
+      world: tempworld
+      spawn: true
+    gamemode: survival
+    items:
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: NETHERITE_SWORD
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          enchants:
+            DURABILITY: 3
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: NETHERITE_SHOVEL
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          enchants:
+            DIG_SPEED: 5
+            DURABILITY: 3
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: NETHERITE_PICKAXE
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          enchants:
+            DIG_SPEED: 5
+            DURABILITY: 3
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: NETHERITE_AXE
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          enchants:
+            DIG_SPEED: 5
+            DURABILITY: 3
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: NETHERITE_HOE
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          enchants:
+            DIG_SPEED: 5
+            DURABILITY: 3
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: DIAMOND_SWORD
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          enchants:
+            DURABILITY: 3
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: DIAMOND_SHOVEL
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          enchants:
+            DIG_SPEED: 5
+            DURABILITY: 3
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: DIAMOND_PICKAXE
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          enchants:
+            DIG_SPEED: 5
+            DURABILITY: 3
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: DIAMOND_AXE
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          enchants:
+            DIG_SPEED: 5
+            DURABILITY: 3
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: DIAMOND_HOE
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          enchants:
+            DIG_SPEED: 5
+            DURABILITY: 3
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: SHEARS
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          enchants:
+            DURABILITY: 3
+
+  DoorsReloaded:
+    modeldata: 10
+    link: "https://link.jeff-media.com/doors-reloaded-spigot"
+    location: #126.88 4 -425.4 -65.4 5
+      world: demoworld
+      x: 126.88
+      y: 4
+      z: -425.4
+      yaw: -65.4
+      pitch: 5
+    gamemode: SURVIVAL
+  BetterTridents:
+    modeldata: 11
+    link: "https://link.jeff-media.com/bettertridents-spigot"
+    location:
+      world: world_the_end
+      x: 94.254
+      y: 54
+      z: 13.250
+      yaw: 197.4
+      pitch: 2.8
+    items:
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: TRIDENT
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          enchants:
+            LOYALTY: 3
+
+  LightPerms:
+    modeldata: 12
+    link: "https://link.jeff-media.com/lightperms-spigot"
+    message:
+      - "§cSorry, I haven't setup a test scenario for §6LightPerms§c yet. Please come back again in a few days to try out §6LightPerms§c."

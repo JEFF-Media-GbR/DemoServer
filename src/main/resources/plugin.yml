@@ -1,0 +1,5 @@
+main: de.jeff_media.demoserver.DemoServer
+version: ${project.version}
+name: JEFF-Media-GbR-Demo-Server
+api-version: 1.17
+load: POSTWORLD
