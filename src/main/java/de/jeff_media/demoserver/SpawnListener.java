@@ -15,7 +15,7 @@ public class SpawnListener implements Listener {
 
     @EventHandler(priority = EventPriority.MONITOR)
     public void onJoin(PlayerJoinEvent event) {
-        event.setJoinMessage("§2§lWelcome to the §6§lJEFF Media GbR DEMO Server§2§l!\n" +
+        event.getPlayer().sendMessage("§2§lWelcome to the §6§lJEFF Media GbR DEMO Server§2§l!\n" +
                 "§2Enter §d§l/demo §2to try out my plugins. §a§l:-)");
         event.getPlayer().teleport(spawnLocation);
         event.getPlayer().getInventory().clear();

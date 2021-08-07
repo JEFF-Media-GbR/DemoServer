@@ -1,14 +1,11 @@
 package de.jeff_media.demoserver;
 
 import de.jeff_media.jefflib.ItemBuilder;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
 import net.md_5.bungee.api.chat.ClickEvent;
 import net.md_5.bungee.api.chat.HoverEvent;
 import net.md_5.bungee.api.chat.TextComponent;
 import net.md_5.bungee.api.chat.hover.content.Text;
 import org.bukkit.*;
-import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -28,23 +25,23 @@ public class GUI implements Listener {
 
     private static final DemoServer main = DemoServer.getInstance();
 
-    public static void tryPlugin(Player player, MyPlugin plugin) {
-        if (plugin.getLocation() != null) {
-            player.teleport(plugin.getLocation());
+    public static void tryPlugin(Player player, DemoPlugin plugin) {
+        if (plugin.location() != null) {
+            player.teleport(plugin.location());
         }
         player.getInventory().clear();
         List<ItemStack> items = plugin.getItems();
         player.getInventory().addItem(items.toArray(new ItemStack[0]));
         player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_CHIME, SoundCategory.MASTER, 2, 1);
         player.closeInventory();
-        if (plugin.getGameMode() != null) {
-            player.setGameMode(plugin.getGameMode());
+        if (plugin.gameMode() != null) {
+            player.setGameMode(plugin.gameMode());
         }
-        List<String> message = plugin.getMessage();
+        List<String> message = plugin.message();
         player.sendMessage(new String[]{
                 " ", " ", " ", " ", " "
         });
-        player.sendMessage("§7=== You are now trying out §6§l" + plugin.getName() + "§r§7 ===");
+        player.sendMessage("§7=== You are now trying out §6§l" + plugin.name() + "§r§7 ===");
         if (message != null && message.size() > 0) {
             player.sendMessage(message.toArray(new String[0]));
         }
@@ -84,7 +81,7 @@ public class GUI implements Listener {
         for (int slot : placeholders) {
             inv.setItem(slot, getPlaceholder());
         }
-        for (MyPlugin plugin : DemoServer.plugins) {
+        for (DemoPlugin plugin : DemoServer.plugins) {
             inv.addItem(getPluginItem(plugin));
         }
         inv.setItem(getSlot(5, 2), new ItemBuilder(Material.IRON_PICKAXE).setCustomModelData(1002).setName("§6Gamemode: §aSurvival").build());
@@ -98,26 +95,26 @@ public class GUI implements Listener {
         player.openInventory(inv);
     }
 
-    public static void showPluginMenu(Player player, MyPlugin plugin) {
-        Inventory inv = Bukkit.createInventory(new GUIHolder("plugin", plugin), 9, "§6§l" + plugin.getName());
-        ItemStack spigotLink = new ItemBuilder(Material.NAUTILUS_SHELL).setCustomModelData(101).setName("§rView §6" + plugin.getName() + "§r on SpigotMC").build();
+    public static void showPluginMenu(Player player, DemoPlugin plugin) {
+        Inventory inv = Bukkit.createInventory(new GUIHolder("plugin", plugin), 9, "§6§l" + plugin.name());
+        ItemStack spigotLink = new ItemBuilder(Material.NAUTILUS_SHELL).setCustomModelData(101).setName("§rView §6" + plugin.name() + "§r on SpigotMC").build();
         inv.setItem(getSlot(1, 3), spigotLink);
-        ItemStack tryNow = new ItemBuilder(Material.NAUTILUS_SHELL).setCustomModelData(102).setName("§a§lTry §6§l" + plugin.getName() + " §a§lnow!").build();
+        ItemStack tryNow = new ItemBuilder(Material.NAUTILUS_SHELL).setCustomModelData(102).setName("§a§lTry §6§l" + plugin.name() + " §a§lnow!").build();
         inv.setItem(getSlot(1, 7), tryNow);
         player.openInventory(inv);
     }
 
-    public static ItemStack getPluginItem(MyPlugin plugin) {
+    public static ItemStack getPluginItem(DemoPlugin plugin) {
         ItemStack itemStack = new ItemStack(Material.NAUTILUS_SHELL);
         ItemMeta meta = itemStack.getItemMeta();
-        meta.setDisplayName("§6" + plugin.getName());
-        meta.setCustomModelData(plugin.getModeldata());
+        meta.setDisplayName("§6" + plugin.name());
+        meta.setCustomModelData(plugin.modeldata());
         itemStack.setItemMeta(meta);
         return itemStack;
     }
 
-    public static void sendLink(Player player, MyPlugin plugin) {
-        sendLink(player, "[Click here to view §6§l" + plugin.getName() + "§a§l on SpigotMC]", plugin.getLink(), "§aClick to view §6" + plugin.getName() + "§a on SpigotMC");
+    public static void sendLink(Player player, DemoPlugin plugin) {
+        sendLink(player, "[Click here to view §6§l" + plugin.name() + "§a§l on SpigotMC]", plugin.link(), "§aClick to view §6" + plugin.name() + "§a on SpigotMC");
     }
 
     public static void sendLink(Player player, String text, String link, String hover) {
@@ -141,11 +138,11 @@ public class GUI implements Listener {
     public void onMainMenuClick(InventoryClickEvent event) {
         if (!(event.getInventory().getHolder() instanceof GUIHolder holder)) return;
         if (!holder.context.equals("pluginlist")) return;
-        if (holder.getPlugin() != null) return;
+        if (holder.plugin != null) return;
         event.setCancelled(true);
 
         ItemStack clickedItem = event.getCurrentItem();
-        MyPlugin plugin = main.getPlugin(clickedItem);
+        DemoPlugin plugin = main.getPlugin(clickedItem);
         Player player = (Player) event.getWhoClicked();
 
         if (clickedItem.hasItemMeta() && clickedItem.getItemMeta().hasCustomModelData() && plugin == null) {
@@ -165,8 +162,8 @@ public class GUI implements Listener {
     @EventHandler
     public void onGuiClick(InventoryClickEvent event) {
         if (!(event.getInventory().getHolder() instanceof GUIHolder holder)) return;
-        if (holder.getPlugin() == null) return;
-        MyPlugin plugin = holder.plugin;
+        if (holder.plugin == null) return;
+        DemoPlugin plugin = holder.plugin;
         ItemStack clickedItem = event.getCurrentItem();
         Player player = (Player) event.getWhoClicked();
         if (!clickedItem.hasItemMeta()) return;
@@ -182,9 +179,7 @@ public class GUI implements Listener {
         }
     }
 
-    @EqualsAndHashCode(callSuper = true)
-    @Data
-    public record GUIHolder(String context,MyPlugin plugin) implements InventoryHolder {
+    public record GUIHolder(String context, DemoPlugin plugin) implements InventoryHolder {
 
         @NotNull
         @Override

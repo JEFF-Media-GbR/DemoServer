@@ -17,16 +17,16 @@ import java.util.List;
 public class DemoServer extends JavaPlugin {
 
     public static World DEMOWORLD_FLAT, TEMPWORLD, DEMOWORLD;
-    public static List<MyPlugin> plugins;
+    public static List<DemoPlugin> plugins;
     @Getter
     private static DemoServer instance;
 
-    public MyPlugin getPlugin(ItemStack item) {
+    public DemoPlugin getPlugin(ItemStack item) {
         if (item == null) return null;
         if (!item.hasItemMeta()) return null;
         if (!item.getItemMeta().hasCustomModelData()) return null;
-        for (MyPlugin plugin : plugins) {
-            if (plugin.getModeldata() == item.getItemMeta().getCustomModelData()) {
+        for (DemoPlugin plugin : plugins) {
+            if (plugin.modeldata() == item.getItemMeta().getCustomModelData()) {
                 return plugin;
             }
         }
@@ -53,7 +53,7 @@ public class DemoServer extends JavaPlugin {
         plugins = new ArrayList<>();
         for (String key : getConfig().getConfigurationSection("plugins").getKeys(false)) {
             ConfigurationSection section = getConfig().getConfigurationSection("plugins").getConfigurationSection(key);
-            MyPlugin plugin = MyPlugin.getFromConfig(section);
+            DemoPlugin plugin = DemoPlugin.getFromConfig(section);
             plugins.add(plugin);
         }
         Bukkit.getPluginManager().registerEvents(new SpawnListener(), this);
