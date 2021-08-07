@@ -496,3 +496,20 @@ plugins:
     link: "https://link.jeff-media.com/lightperms-spigot"
     message:
       - "§cSorry, I haven't setup a test scenario for §6LightPerms§c yet. Please come back again in a few days to try out §6LightPerms§c."
+
+  SignIt:
+    modeldata: 13
+    link: "https://www.spigotmc.org/resources/signit.94720/"
+    location:
+      world: demoworld2
+      x: 359.5
+      y: 64
+      z: 3215.5
+      yaw: 0
+      pitch: 0
+    message:
+      - "§aSignIt allows your players to sign maps preventing others from copying those. We prepared few maps for you, some of them are fresh new and some already signed by other players. Go ahead!"
+      - ""
+      - "§eTry to sign a map with §6§l/sign§r§e, remove sign with §6§l/unsign§r§e or sign all maps in your inventory with §6§l/signall§r§e! Use Workbench or Cartography Table then and check what will happen if you try to copy a map signed by someone else. Cheers~"
+    commands:
+      - "signdemo"

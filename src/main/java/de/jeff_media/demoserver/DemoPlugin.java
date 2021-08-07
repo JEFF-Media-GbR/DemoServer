@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public record DemoPlugin(String name, int modeldata, List<ItemStack> items, Location location, String link, List<String> message, boolean shuffleItems, GameMode gameMode, int randomItems) {
+public record DemoPlugin(String name, int modeldata, List<ItemStack> items, Location location, String link, List<String> message, List<String> commands, boolean shuffleItems, GameMode gameMode, int randomItems) {
 
     public static DemoPlugin getFromConfig(ConfigurationSection section) {
         String name = section.getName();
@@ -35,6 +35,7 @@ public record DemoPlugin(String name, int modeldata, List<ItemStack> items, Loca
                 location,
                 section.getString("link"),
                 section.getStringList("message"),
+                section.getStringList("commands"),
                 section.getBoolean("shuffle-items", false),
                 Enums.getIfPresent(GameMode.class, section.getString("gamemode", "")).orNull(),
                 section.getInt("give-random-items", 0));

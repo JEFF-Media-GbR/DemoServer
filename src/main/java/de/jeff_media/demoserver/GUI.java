@@ -38,12 +38,17 @@ public class GUI implements Listener {
             player.setGameMode(plugin.gameMode());
         }
         List<String> message = plugin.message();
+        List<String> commands = plugin.commands();
         player.sendMessage(new String[]{
                 " ", " ", " ", " ", " "
         });
         player.sendMessage("§7=== You are now trying out §6§l" + plugin.name() + "§r§7 ===");
         if (message != null && message.size() > 0) {
             player.sendMessage(message.toArray(new String[0]));
+        }
+        if (commands != null && commands.size() > 0) {
+            for (String com : commands)
+                player.performCommand(com);
         }
     }
 
@@ -69,7 +74,10 @@ public class GUI implements Listener {
         for (int slot = getSlot(1, 1); slot <= getSlot(1, 9); slot++) {
             placeholders.add(slot);
         }
-        for (int slot = getSlot(4, 1); slot <= getSlot(4, 9); slot++) {
+        for (int slot = getSlot(4, 1); slot <= getSlot(4, 4); slot++) {
+            placeholders.add(slot);
+        }
+        for (int slot = getSlot(4, 6); slot <= getSlot(4, 9); slot++) {
             placeholders.add(slot);
         }
         placeholders.add(getSlot(2, 1));
